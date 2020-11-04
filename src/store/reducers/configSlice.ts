@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 // eslint-disable-next-line import/no-cycle
-import {  RootState } from '../index';
+import { RootState } from '../index';
 
 const configSlice = createSlice({
   name: 'config',

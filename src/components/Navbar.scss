@@ -1,7 +1,8 @@
 @import '../themes/theme.scss';
 
 .header-container {
+  height: 200px;
   @include themify($themes) {
-    color: themed('color');
+    color: themed('fontColor');
   }
 }

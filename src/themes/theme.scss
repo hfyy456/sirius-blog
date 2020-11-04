@@ -1,11 +1,15 @@
 $themes:(
   light:(
-    color:'#000000',
-    background-color:"#f7f7f7"
+    bgColor: #f7f7f7,
+    fontColor: #000000,
+    mainBgColor: #f2f3f8,
+    borderColor: #dcdfe6,
   ),
   dark:(
-    color: '#2b3743',
-    background-color: '#ffffff', 
+    bgColor: #2b3743,
+    fontColor: #ffffff,
+    mainBgColor: #1f2c35,
+    borderColor: #384651,
   ),
 );
 @mixin themify($themes: $themes) {
