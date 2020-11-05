@@ -12,6 +12,7 @@ $themes:(
     borderColor: #384651,
   ),
 );
+
 @mixin themify($themes: $themes) {
   @each $theme-name, $map in $themes {
 

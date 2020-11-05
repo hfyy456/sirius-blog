@@ -1,8 +1,18 @@
 @import '../themes/theme.scss';
 
-.header-container {
-  height: 200px;
+.nav-container {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  height: 6vh;
+  width: 100vw;
+  padding: 0 4vw;
+}
+
+.blog-name {
   @include themify($themes) {
-    color: themed('fontColor');
+    color: themed('bgColor');
   }
+  font-size: 18px;
+  font-weight:700;
 }
