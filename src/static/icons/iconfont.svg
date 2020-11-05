@@ -1,0 +1,35 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<!--
+2013-9-30: Created.
+-->
+<svg>
+<metadata>
+Created by iconfont
+</metadata>
+<defs>
+
+<font id="iconfont" horiz-adv-x="1024" >
+  <font-face
+    font-family="iconfont"
+    font-weight="500"
+    font-stretch="normal"
+    units-per-em="1024"
+    ascent="896"
+    descent="-128"
+  />
+    <missing-glyph />
+    
+    <glyph glyph-name="feeds-fill" unicode="&#58881;" d="M810.667 597.333a64 64 0 0 0 64-64v-426.666a64 64 0 0 0-64-64l-81.131-0.022a127.275 127.275 0 0 1 16.981 57.707l0.15 6.315V597.333h64zM640 725.333a64 64 0 0 0 64-64v-554.666a64 64 0 0 0-64-64H213.333a64 64 0 0 0-64 64V661.333a64 64 0 0 0 64 64H640z m-192-320H277.333v-64H448v64z m128 128H277.333v-64H576v64z"  horiz-adv-x="1024" />
+
+    
+    <glyph glyph-name="home-fill" unicode="&#58882;" d="M556.587 736.64l288.49-183.915a64 64 0 0 0 29.59-53.973v-392.747a64 64 0 0 0-64-64l-224 0.022v256.64H448v-256.64l-213.333-0.043a64 64 0 0 0-64 64V504.32a64 64 0 0 0 30.272 54.4l287.53 178.347a64 64 0 0 0 68.139-0.427z"  horiz-adv-x="1024" />
+
+    
+    <glyph glyph-name="night-mode-fill" unicode="&#58883;" d="M490.667 725.333c14.549 0 28.885-0.981 42.922-2.858a194.283 194.283 0 1 1 274.219-274.24 323.206 323.206 0 0 0 2.859-42.902c0-176.725-143.275-320-320-320-176.726 0-320 143.275-320 320 0 176.726 143.274 320 320 320z m224.277 0v-72.853h72.875v-60.01l-72.875 0.02v-72.874h-59.99l-0.02 72.875H582.1V652.48h72.832v72.853h60.011z"  horiz-adv-x="1024" />
+
+    
+
+
+  </font>
+</defs></svg>

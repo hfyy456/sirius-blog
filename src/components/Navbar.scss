@@ -7,12 +7,57 @@
   height: 6vh;
   width: 100vw;
   padding: 0 4vw;
+
+  a {
+    text-decoration: none;
+  }
+
+  a:visited {
+    @include themify($themes) {
+      color: themed('bgColor');
+    }
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  li {
+    display: inline-block;
+
+  }
+}
+
+.menu-item-active {
+  color: white
+}
+
+.menu-item {
+  position: relative;
+  font-weight: 900;
+  font-size: 16px;
+
+  &:hover ::after {
+    width: 100%;
+  }
+}
+
+.menu-item ::after {
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  content: '';
+  height: 3px;
+  transition: all .3s ease-in-out;
+  background-color: #80c8f8;
 }
 
 .blog-name {
   @include themify($themes) {
     color: themed('bgColor');
   }
+
   font-size: 18px;
   font-weight:700;
 }

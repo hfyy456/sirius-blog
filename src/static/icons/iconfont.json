@@ -1,0 +1,30 @@
+{
+  "id": "2183980",
+  "name": "sirius-blog",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "18064510",
+      "name": "feeds-fill",
+      "font_class": "feeds-fill",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "18064511",
+      "name": "home-fill",
+      "font_class": "home-fill",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "18064512",
+      "name": "night-mode-fill",
+      "font_class": "night-mode-fill",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    }
+  ]
+}

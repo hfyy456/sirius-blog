@@ -1,13 +1,18 @@
 import React, { useEffect } from 'react';
 import './Navbar.scss'
-import { Link, useHistory } from 'react-router-dom'
+import { NavLink, useHistory } from 'react-router-dom'
 
 export default function Navbar(): JSX.Element {
   const path: any = useHistory()
   const blogName: string = 'Sirius Blog'
   const menuList: Array<any> = [{
     name: '首页',
+    path: '/',
+    icon: 'home'
+  }, {
+    name: "关于",
     path: '/about',
+    icon: 'feeds'
   }]
   useEffect(() => {
     console.log(path.location.pathname)
@@ -19,7 +24,7 @@ export default function Navbar(): JSX.Element {
         <ul>
           {
             menuList.map((item, index) => {
-              return <li key={index}><Link to={item.path}>{item.name}</Link></li>
+              return <li className='menu-item' key={index}><NavLink activeClassName='menu-item-active' to={item.path}><i className={`iconfont icon${item.icon}-fill`} />{item.name}</NavLink></li>
             })
           }
         </ul>
