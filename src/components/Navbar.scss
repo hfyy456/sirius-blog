@@ -6,7 +6,6 @@
   align-items: center;
   height: 6vh;
   width: 100vw;
-  padding: 0 4vw;
 
   a {
     text-decoration: none;
@@ -17,15 +16,12 @@
       color: themed('bgColor');
     }
   }
+}
 
-  ul {
-    list-style: none;
-  }
-
-  li {
-    display: inline-block;
-
-  }
+.menus {
+  position: relative;
+  flex: 2;
+  text-align: right;
 }
 
 .menu-item-active {
@@ -36,6 +32,7 @@
   position: relative;
   font-weight: 900;
   font-size: 16px;
+  margin-right: 1.5vw;
 
   &:hover ::after {
     width: 100%;
@@ -58,6 +55,8 @@
     color: themed('bgColor');
   }
 
-  font-size: 18px;
+  margin-left:3vw;
+  flex:1;
+  font-size: 20px;
   font-weight:700;
 }

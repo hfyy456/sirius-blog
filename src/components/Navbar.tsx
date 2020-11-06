@@ -13,7 +13,7 @@ export default function Navbar(): JSX.Element {
     name: "关于",
     path: '/about',
     icon: 'feeds'
-  }]
+  },]
   useEffect(() => {
     console.log(path.location.pathname)
   })
@@ -21,13 +21,11 @@ export default function Navbar(): JSX.Element {
     <nav className="nav-container" >
       <span className='blog-name'>{blogName}</span>
       <span className='menus'>
-        <ul>
-          {
-            menuList.map((item, index) => {
-              return <li className='menu-item' key={index}><NavLink activeClassName='menu-item-active' to={item.path}><i className={`iconfont icon${item.icon}-fill`} />{item.name}</NavLink></li>
-            })
-          }
-        </ul>
+        {
+          menuList.map((item, index) => {
+            return <span className='menu-item' key={index}><NavLink activeClassName='menu-item-active' to={item.path}><i className={`iconfont icon${item.icon}-fill`} />{item.name}</NavLink></span>
+          })
+        }
       </span>
     </nav>
   )
