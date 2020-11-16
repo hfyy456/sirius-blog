@@ -1,8 +1,12 @@
 import React from 'react';
-export default function About() {
+import PostCard from '../components/postCard'
+import './Home.scss'
+export default function Home() {
   return (
-    <div>
-      sdasd
-    </div>
+    <main className='home-page'>
+      <div className='post-list'>
+        <PostCard title='f' cover='s' date='s' tags={[]} />
+      </div>
+    </main>
   )
 }

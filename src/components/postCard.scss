@@ -1,0 +1,11 @@
+.card-container {
+  display: flex;
+  border-radius: 12px 8px 8px 12px;
+  box-shadow: 0 4px 8px 6px rgba(7, 17, 27, .06);
+  height: 200px;
+  max-width: 1280px;
+
+  &:hover {
+    box-shadow: 0 4px 12px 12px rgba(7, 17, 27, .15);
+  }
+}
