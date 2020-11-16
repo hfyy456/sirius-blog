@@ -1,5 +1,10 @@
-.home-page {
+@import '../themes/theme.scss';
 
+.home-page {
+  @include themify($themes) {
+    background: themed('bgColor');
+    color:themed('fontColor')
+  }
 }
 
 .post-list {

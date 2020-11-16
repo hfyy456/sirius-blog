@@ -1,11 +1,78 @@
+@import '../themes/theme.scss';
+
 .card-container {
   display: flex;
   border-radius: 12px 8px 8px 12px;
   box-shadow: 0 4px 8px 6px rgba(7, 17, 27, .06);
-  height: 200px;
+  height: 400px;
   max-width: 1280px;
+
+  @include themify($themes) {
+    background-color: themed('pureColor');
+  }
 
   &:hover {
     box-shadow: 0 4px 12px 12px rgba(7, 17, 27, .15);
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 95vw;
+    height: 100%;
+    flex-wrap: wrap;
+  }
+}
+
+.card-cover {
+  width: 45%;
+  overflow: hidden;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all .8s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.card-info {
+  width: 55%;
+  padding: 3%;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+
+  .arti-title {
+    text-align: center;
+    font-size: 34px;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      margin-top: 5%;
+      margin-bottom: 5%;
+    }
+    &:hover {
+      cursor: pointer;
+      @include themify($themes) {
+        color: themed('activeColor');
+      }
+    }
+  }
+
+  .arti-preview {
+    font-size: 20px;
+  }
+
+  .arti-date {
+    margin-top: 5%;
+    font-size: 24px;
+    color: #858585;
   }
 }
