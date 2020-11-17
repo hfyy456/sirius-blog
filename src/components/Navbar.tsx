@@ -20,13 +20,17 @@ export default function Navbar(): JSX.Element {
   return (
     <nav className="nav-container" >
       <span className='blog-name'>{blogName}</span>
-      <span className='menus'>
+      <span className='nav-actions'>
+        <span>打开</span>
+        <span>关闭</span>
+      </span>
+      <div className='menus'>
         {
           menuList.map((item, index) => {
             return <span className='menu-item' key={index}><NavLink activeClassName='menu-item-active' to={item.path}><i className={`iconfont icon${item.icon}-fill`} />{item.name}</NavLink></span>
           })
         }
-      </span>
+      </div>
     </nav>
   )
 }

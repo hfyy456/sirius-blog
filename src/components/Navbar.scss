@@ -2,10 +2,14 @@
 
 .nav-container {
   position: fixed;
-  display: flex;
-  align-items: center;
-  height: 6vh;
+  height: 100vh;
   width: 100vw;
+  z-index: 2;
+  opacity: 0.9;
+
+  @include themify($themes) {
+    background: themed('bgColor');
+  }
 
   a {
     text-decoration: none;
@@ -13,15 +17,16 @@
 
   a:visited {
     @include themify($themes) {
-      color: themed('bgColor');
+      color: themed('fontColor');
     }
   }
 }
 
 .menus {
   position: relative;
-  flex: 2;
-  text-align: right;
+  margin-top: 20vh;
+  width: 100%;
+  text-align: center;
 }
 
 .menu-item-active {
@@ -30,9 +35,9 @@
 
 .menu-item {
   position: relative;
-  font-weight: 900;
-  font-size: 16px;
-  margin-right: 1.5vw;
+  font-weight: 600;
+  font-size: 24px;
+  margin-right: 2vw;
 
   &:hover ::after {
     width: 100%;
@@ -52,11 +57,19 @@
 
 .blog-name {
   @include themify($themes) {
-    color: themed('bgColor');
+    color: themed('fontColor');
   }
 
+  display: inline-block;
+  margin-top:5vh;
   margin-left:3vw;
-  flex:1;
-  font-size: 20px;
+  font-size: 28px;
   font-weight:700;
+}
+
+.nav-actions {
+  @include themify($themes) {
+    color: themed('fontColor');
+  }
+   
 }
