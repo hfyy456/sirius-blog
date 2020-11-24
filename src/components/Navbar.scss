@@ -61,15 +61,31 @@
   }
 
   display: inline-block;
-  margin-top:5vh;
   margin-left:3vw;
   font-size: 28px;
   font-weight:700;
 }
 
+.top-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5vh;
+  padding-left: 5vh;
+  padding-right: 5vh;
+}
+
 .nav-actions {
+  cursor: pointer;
+
   @include themify($themes) {
     color: themed('fontColor');
   }
-   
+
+  i {
+    font-size: 22px;
+  }
+  :hover{
+    color: #80c8f8;
+  }
 }
