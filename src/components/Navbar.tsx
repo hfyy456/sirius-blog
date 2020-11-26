@@ -21,13 +21,13 @@ export default function Navbar(): JSX.Element {
   })
   const handClickCloseMenu = (e: any) => {
     setIsExpansion(false)
-    document.body.style.overflowY='auto';
+    document.body.style.overflowY = 'auto';
 
   }
   const handClickOpenMenu = (e: any) => {
     setIsExpansion(true)
     setIsFirstLoad(false)
-    document.body.style.overflowY='hidden';
+    document.body.style.overflowY = 'hidden';
 
   }
   return (

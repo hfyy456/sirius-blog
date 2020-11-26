@@ -1,5 +1,6 @@
 import React from 'react';
 import './postCard.scss'
+import { NavLink } from 'react-router-dom'
 
 interface Iprops {
   title: string,
@@ -13,10 +14,9 @@ const PostCard: React.FC<Iprops> = (props) => {
   return (
     <div className="card-container">
       <div className='card-cover'>
-        <a href='www.baidu.com'>
+        <NavLink to='/article/123'>
           <img alt='cover' src={cover} />
-
-        </a>
+        </NavLink>
       </div>
       <div className='card-info'>
         <h3 className='arti-title'>{title}</h3>
