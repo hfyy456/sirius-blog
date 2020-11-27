@@ -61,7 +61,6 @@
   @include themify($themes) {
     background: themed('bgColor');
   }
-
   padding:7px 7px 7px 7px;
   border-radius: 2px;
 }
@@ -157,11 +156,7 @@
   }
 }
 
-
-
 .nav-wrapper {
-  opacity: 0.9;
-  width: 100vw;
   overflow: hidden;
-
+  height: 100vh;
 }

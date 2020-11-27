@@ -4,6 +4,7 @@ import { selectTheme } from '../store/reducers/configSlice'
 import { useSelector } from 'react-redux';
 import { useLocation  } from 'react-router-dom'
 import Header from '../components/Header';
+
 type Props = {
   children: ReactNode;
 };

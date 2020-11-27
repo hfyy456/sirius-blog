@@ -1,15 +1,15 @@
 $themes:(
   light:(
-    bgColor: #f7f7f7,
-    fontColor: #000000,
+    bgColor: rgba(247,247,247,.95),
+    fontColor: #2b3743,
     mainBgColor: #f2f3f8,
     borderColor: #dcdfe6,
     activeColor:#49b1f5,
     pureColor:#ffffff,
   ),
   dark:(
-    bgColor: #2b3743,
-    fontColor: #ffffff,
+    bgColor: rgba(43,55,67,.95),
+    fontColor: #d8d8d8,
     mainBgColor: #1f2c35,
     borderColor: #384651,
     pureColor:#2b3743,

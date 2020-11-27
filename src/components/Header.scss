@@ -7,7 +7,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
-  animation: fadeIn 3s;
+  animation: fadeIn 2s;
 }
 
 @keyframes fadeIn {
@@ -27,7 +27,7 @@
   position: absolute;
   top: 42%;
   width: 100%;
-
+  z-index: 1;
   @include themify($themes) {
     color: themed('bgColor');
   }

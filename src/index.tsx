@@ -8,9 +8,8 @@ import * as serviceWorker from './serviceWorker';
 const store = configuredStore();
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Root store={store} history={history} />
-  </React.StrictMode>,
+  <Root store={store} history={history} />
+  ,
   document.getElementById('root')
 );
 

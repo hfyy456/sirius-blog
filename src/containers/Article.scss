@@ -5,6 +5,7 @@
   margin: 2vh auto 2vh auto;
   padding: 2vw;
   border-radius: 4px;
+  height: calc(100vh - 15vh);
   @media screen and (max-width:768px) {
       width: 90vw;
   }

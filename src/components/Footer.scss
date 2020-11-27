@@ -1,0 +1,21 @@
+@import '../themes/theme.scss';
+
+.footer-container {
+  height: 20vh;
+  position: absolute;
+  bottom: 0;
+  font-size: 24px;
+  width: 100%;
+  text-align: center;
+
+  @include themify($themes) {
+    color: themed('fontColor');
+  }
+
+  .copyright {
+    a{
+      text-decoration:underline;
+    }
+  }
+
+}
