@@ -1,0 +1,22 @@
+@import '../themes/theme.scss';
+
+.article-container{
+  width: 90vw;
+  margin: 2vh auto 2vh auto;
+  padding:2vw;
+  border-radius: 4px;
+  @include themify($themes) {
+    background: themed('pureColor');
+  }
+  box-shadow: 0 4px 8px 6px rgba(7, 17, 27, .06);
+
+  &:hover {
+    box-shadow: 0 4px 12px 12px rgba(7, 17, 27, .15);
+  }
+
+}
+.page{
+  @include themify($themes) {
+    background: themed('bgColor');
+  }
+}
