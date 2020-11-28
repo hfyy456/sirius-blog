@@ -27,7 +27,7 @@ export default function RootRoute() {
       >
         <CSSTransition
           key={location.pathname}
-          timeout={200}
+          timeout={500}
           unmountOnExit={true}
         >
           <Switch>

@@ -22,7 +22,7 @@ export default function Navbar(): JSX.Element {
     return () => {
       document.body.style.overflowY = 'auto';
     }
-  },[])
+  },[path.location.pathname])
   const handClickCloseMenu = (e: any) => {
     setIsExpansion(false)
     document.body.style.overflowY = 'auto';

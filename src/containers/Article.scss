@@ -6,9 +6,11 @@
   padding: 2vw;
   border-radius: 4px;
   height: calc(100vh - 15vh);
+
   @media screen and (max-width:768px) {
-      width: 90vw;
+    width: 90vw;
   }
+
   @include themify($themes) {
     background: themed('pureColor');
   }
@@ -23,6 +25,7 @@
 
 .page {
   overflow: hidden;
+
   @include themify($themes) {
     background: themed('bgColor');
   }
