@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import App from './App'
 import { Route, Switch, useHistory, useLocation } from 'react-router-dom'
 import About from './AboutPage'
@@ -16,10 +16,13 @@ export default function RootRoute() {
     PUSH: 'forward',
     POP: 'back'
   }
+  useEffect(() => {
+    console.log(1)
+  }, [location.pathname])
   return (
     <App>
       <TransitionGroup
-        className={'router-wrapper'}
+        id={'router-wrapper'}
         childFactory={child => React.cloneElement(
           child,
           { classNames: ANIMATION_MAP[history.action] }

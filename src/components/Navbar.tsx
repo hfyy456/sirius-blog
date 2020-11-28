@@ -20,6 +20,7 @@ export default function Navbar(): JSX.Element {
   useEffect(() => {
     console.log(path.location.pathname)
     return () => {
+      setIsExpansion(false)
       document.body.style.overflowY = 'auto';
     }
   },[path.location.pathname])
