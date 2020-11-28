@@ -78,8 +78,8 @@
   .menu-item {
     position: relative;
     font-weight: 600;
-    font-size: 24px;
-    margin-right: 2vw;
+    font-size: 1.4rem;
+    margin-right: 2.5vw;
 
     &:hover ::after {
       width: 100%;
@@ -131,7 +131,7 @@
   .blog-name {
     margin-left: 5vw;
     display: inline-block;
-    font-size: 28px;
+    font-size: 1.4rem;
     font-weight: 700;
   }
 
@@ -145,7 +145,7 @@
         color: themed('fontColor');
       }
 
-      font-size: 24px;
+      font-size: 1.2rem;
 
       &:hover {
         color: #80c8f8;
@@ -158,5 +158,4 @@
 
 .nav-wrapper {
   overflow: hidden;
-  height: 100vh;
 }

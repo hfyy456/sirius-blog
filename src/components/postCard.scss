@@ -51,7 +51,7 @@
 
   .arti-title {
     text-align: center;
-    font-size: 34px;
+    font-size: 1.6rem;
     @media screen and (max-width: 768px) {
       width: 100%;
       margin-top: 5%;
@@ -66,12 +66,12 @@
   }
 
   .arti-preview {
-    font-size: 20px;
+    font-size: 1rem;
   }
 
   .arti-date {
     margin-top: 5%;
-    font-size: 24px;
+    font-size: 1.2rem;
     color: #858585;
   }
 }
