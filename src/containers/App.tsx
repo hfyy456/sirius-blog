@@ -4,7 +4,7 @@ import { selectTheme } from '../store/reducers/configSlice'
 import { useSelector } from 'react-redux';
 import { useLocation  } from 'react-router-dom'
 import Header from '../components/Header';
-
+import Tools from '../components/Tools';
 type Props = {
   children: ReactNode;
 };
@@ -20,6 +20,7 @@ function App(props: Props) {
     <div className={'theme-' + theme}>
       {path.pathname === '/' ? <Header /> : null}
       {children}
+      <Tools />
     </div>
   );
 }
