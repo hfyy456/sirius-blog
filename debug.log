@@ -13,3 +13,4 @@
 [1128/174916.632:ERROR:process_memory_win.cc(73)] ReadMemory at 0x79f19fd680 of 16 bytes failed: 仅完成部分的 ReadProcessMemory 或 WriteProcessMemory 请求。 (0x12B)
 [1128/174916.632:ERROR:exception_snapshot_win.cc(196)] EXCEPTION_POINTERS read failed
 [1128/174916.632:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: 已尝试访问正在退出的过程。 (0xc000010a)
+[1129/134632.009:ERROR:directory_reader_win.cc(43)] FindFirstFile: 系统找不到指定的路径。 (0x3)

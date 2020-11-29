@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import App from './App'
 import { Route, Switch, useHistory, useLocation } from 'react-router-dom'
 import About from './AboutPage'
@@ -9,7 +9,6 @@ import {
   TransitionGroup,
   CSSTransition
 } from "react-transition-group";
-
 export default function RootRoute() {
   const location: any = useLocation();
   const history: any = useHistory();
@@ -17,9 +16,7 @@ export default function RootRoute() {
     PUSH: 'forward',
     POP: 'back'
   }
-  useEffect(() => {
-    console.log(1)
-  }, [location.pathname])
+
   return (
     <App>
       <TransitionGroup
@@ -32,12 +29,13 @@ export default function RootRoute() {
         <CSSTransition
           key={location.pathname}
           timeout={500}
+          appear={true}
           unmountOnExit={true}
         >
-          <Switch>
-            <Route exact path='/about' component={About} />
+          <Switch location={location}>
+            <Route path='/about' component={About} />
             <Route exact path='/' component={Home} />
-            <Route exact path='/article/:id' component={Article} />
+            <Route path='/article/:id' component={Article} />
           </Switch>
         </CSSTransition>
       </TransitionGroup>

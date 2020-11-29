@@ -3,26 +3,27 @@ import './postCard.scss'
 import { NavLink } from 'react-router-dom'
 
 interface Iprops {
+  id: string,
   title: string,
-  cover: string,
+  thumbnail: string,
   date: string,
-  tags: Array<string>,
-  preview: string,
+  categories: Array<string>,
+  summary: string,
 }
 const PostCard: React.FC<Iprops> = (props) => {
-  const { title, cover, date, tags, preview } = props
+  const { id, title, thumbnail, date, categories, summary } = props
   return (
     <div className="card-container">
       <div className='card-cover'>
-        <NavLink to='/article/123'>
-          <img alt='cover' src={cover} />
+        <NavLink to={`/article/${id}`}>
+          <img alt='cover' src={thumbnail} />
         </NavLink>
       </div>
       <div className='card-info'>
-        <NavLink className='link-active' to='/article/123' ><h3 className='arti-title'>{title}</h3></NavLink>
-        <section className='arti-preview'>{preview}</section>
+        <NavLink className='link-active' to={`/article/${id}`} ><h3 className='arti-title'>{title}</h3></NavLink>
+        <section className='arti-preview'>{summary}</section>
         <div className='arti-date'>{date}</div>
-        <div className='arti-tags'>{tags}</div>
+        <div className='arti-tags'>{categories}</div>
       </div>
     </div>
   )

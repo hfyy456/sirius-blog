@@ -1,4 +1,4 @@
-import React, { ReactNode ,useEffect} from 'react';
+import React, { ReactNode } from 'react';
 import './App.scss';
 import { selectTheme } from '../store/reducers/configSlice'
 import { useSelector } from 'react-redux';
@@ -13,12 +13,6 @@ function App(props: Props){
   const path: any = useLocation()
   const theme: string = useSelector(selectTheme)
   const { children } = props;
-  useEffect(() => {
-    console.log(path)
-  },[path])
-  useEffect(()=>{
-    console.log(theme)
-  },[theme])
   return (
     <div className={'theme-' + theme}>
       {path.pathname === '/' ? <Header /> : null}
