@@ -19,7 +19,7 @@ const PostCard: React.FC<Iprops> = (props) => {
         </NavLink>
       </div>
       <div className='card-info'>
-        <h3 className='arti-title'>{title}</h3>
+        <NavLink className='link-active' to='/article/123' ><h3 className='arti-title'>{title}</h3></NavLink>
         <section className='arti-preview'>{preview}</section>
         <div className='arti-date'>{date}</div>
         <div className='arti-tags'>{tags}</div>

@@ -9,13 +9,16 @@ type Props = {
   children: ReactNode;
 };
 
-function App(props: Props) {
+function App(props: Props){
   const path: any = useLocation()
   const theme: string = useSelector(selectTheme)
   const { children } = props;
   useEffect(() => {
     console.log(path)
   },[path])
+  useEffect(()=>{
+    console.log(theme)
+  },[theme])
   return (
     <div className={'theme-' + theme}>
       {path.pathname === '/' ? <Header /> : null}

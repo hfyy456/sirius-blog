@@ -6,6 +6,7 @@
   box-shadow: 0 4px 8px 6px rgba(7, 17, 27, .06);
   height: 350px;
   max-width: 1280px;
+
   @include themify($themes) {
     background-color: themed('pureColor');
   }
@@ -52,13 +53,16 @@
   .arti-title {
     text-align: center;
     font-size: 1.6rem;
+
     @media screen and (max-width: 768px) {
       width: 100%;
       margin-top: 5%;
       margin-bottom: 5%;
     }
+
     &:hover {
       cursor: pointer;
+
       @include themify($themes) {
         color: themed('activeColor');
       }
@@ -73,5 +77,13 @@
     margin-top: 5%;
     font-size: 1.2rem;
     color: #858585;
+  }
+
+  .link-active {
+    text-decoration: none;
+
+    @include themify($themes) {
+      color: themed('fontColor');
+    }
   }
 }

@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from 'react'
+import { selectTheme, switchDark, switchLight } from '../store/reducers/configSlice'
+import { useDispatch, useSelector } from 'react-redux';
 import './Tools.scss'
 export default function Tools() {
+  const dispatch = useDispatch();
+  const theme: string = useSelector(selectTheme)
   const [visibie, setVisible] = useState(false)
   useEffect(() => {
     document.addEventListener('scroll', handleScroll, true);
@@ -40,15 +44,23 @@ export default function Tools() {
       }
     )
   }
+  const handleClickThemeSwitch = () => {
+    if (theme === 'light') {
+      dispatch(switchDark())
+    } else {
+      dispatch(switchLight())
+    }
+  }
   return (
     <>
-
       <div className={`tools-container${visibie ? ' show' : ' hide'}`} >
+        <button onClick={handleClickThemeSwitch} className='action-button'>
+          <i className='iconfont icontheme'></i>
+        </button>
         <button onClick={handleClickBackToTop} className='action-button'>
           <i className='iconfont icontop'></i>
         </button>
       </div>
-
     </>
 
   )

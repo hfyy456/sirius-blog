@@ -27,16 +27,25 @@
       background: themed('fontColor');
       color:themed('bgColor')
     }
-
-    border-radius: 50%;
+    margin-bottom: 2px;
     i{
       display: block;
-      margin:.4rem;
-      font-size: 1.5rem;
-      line-height: 1.5rem;
+      margin:.3rem;
+      font-size: 1.2rem;
+      line-height: 1.2rem;
     }
   }
-
+  .rotate{
+    animation: selfRotate 2s infinite linear;
+  }
+  @keyframes selfRotate{
+    from{
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
   button {
     display: block;
     text-align: center;
