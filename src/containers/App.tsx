@@ -1,24 +1,33 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode, useEffect } from 'react';
 import './App.scss';
-import { selectTheme } from '../store/reducers/configSlice'
-import { useSelector } from 'react-redux';
-import { useLocation  } from 'react-router-dom'
+import { selectLoading, selectTheme, setLoading } from '../store/reducers/configSlice'
+import { useDispatch, useSelector } from 'react-redux';
+import { useLocation } from 'react-router-dom'
 import Header from '../components/Header';
 import Tools from '../components/Tools';
+import Loading from '../components/Loading'
 type Props = {
   children: ReactNode;
 };
 
-function App(props: Props){
+function App(props: Props) {
   const path: any = useLocation()
+  const dispatch = useDispatch()
+  const loading = useSelector(selectLoading)
   const theme: string = useSelector(selectTheme)
   const { children } = props;
+  useEffect(() => {
+    dispatch(setLoading())
+  }, [path])
   return (
-    <div className={'theme-' + theme}>
-      {path.pathname === '/' ? <Header /> : null}
-      {children}
-      <Tools />
-    </div>
+    <>
+      <Loading loading={loading} mode={theme} />
+      <div className={'theme-' + theme}>
+        {path.pathname === '/' ? <Header /> : null}
+        {children}
+        <Tools />
+      </div>
+    </>
   );
 }
 

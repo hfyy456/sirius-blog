@@ -1,6 +1,7 @@
 import React from 'react';
 import './postCard.scss'
 import { NavLink } from 'react-router-dom'
+import setDate from '../utils/date'
 
 interface Iprops {
   id: string,
@@ -22,7 +23,7 @@ const PostCard: React.FC<Iprops> = (props) => {
       <div className='card-info'>
         <NavLink className='link-active' to={`/article/${id}`} ><h3 className='arti-title'>{title}</h3></NavLink>
         <section className='arti-preview'>{summary}</section>
-        <div className='arti-date'>{date}</div>
+        <div className='arti-date'>{setDate(date)}</div>
         <div className='arti-tags'>{categories}</div>
       </div>
     </div>
