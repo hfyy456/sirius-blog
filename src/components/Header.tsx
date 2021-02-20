@@ -19,7 +19,7 @@ export default function Header(): JSX.Element {
           SIRIUS BLOG
         </h1>
         <div className='desc'>
-          我是一个只会JavaScript的前端小萌新.
+          不鸣则已
         </div>
       </div>
       <div className='scroll-down'><i onClick={scrollToElement} className="iconfont icontop bottom"></i></div>

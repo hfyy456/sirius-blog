@@ -36,6 +36,6 @@ class Xfetch {
     })
   }
 }
-const baseUrl = 'http://localhost:10086/api/'
+const baseUrl = 'https://www.hfsblog.com/api/'
 const service: any = new Xfetch(baseUrl)
 export default service
