@@ -7,13 +7,12 @@
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
-
   .scroll-down {
     text-align: center;
     position: absolute;
     width: 100%;
     bottom: 2%;
-
+    user-select: none;
     @include themify($themes) {
       color: themed('bgColor');
     }
