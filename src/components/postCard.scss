@@ -5,7 +5,7 @@
   border-radius: 12px 8px 8px 12px;
   box-shadow: 0 4px 8px 6px rgba(7, 17, 27, .06);
   height: 18.5rem;
-  max-width: 1280px;
+  width: 1280px;
 
   @include themify($themes) {
     background-color: themed('pureColor');
@@ -15,6 +15,10 @@
     box-shadow: 0 4px 12px 12px rgba(7, 17, 27, .15);
   }
 
+  @media screen and (max-width:1280px) {
+    width: 95vw;
+  }
+
   @media screen and (max-width: 768px) {
     width: 95vw;
     height: 100%;
@@ -22,13 +26,18 @@
   }
 }
 
+
 .card-cover {
   width: 45%;
   overflow: hidden;
+  margin: 1px;
+  border-radius: 12px 0px 0px 12px;
 
   @media screen and (max-width: 768px) {
     width: 100%;
     height: 15rem;
+    border-radius: 12px 8px 0px 0px;
+
   }
 
   img {
@@ -37,11 +46,13 @@
     object-fit: cover;
     transition: all .8s;
 
+
     &:hover {
       transform: scale(1.1);
     }
   }
 }
+
 
 .card-info {
   width: 55%;

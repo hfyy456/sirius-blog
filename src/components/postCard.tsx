@@ -2,7 +2,8 @@ import React from 'react';
 import './postCard.scss'
 import { NavLink } from 'react-router-dom'
 import setDate from '../utils/date'
-
+import LazyLoad from 'react-lazyload';
+import img from '../static/images/background.jpg'
 interface Iprops {
   id: string,
   title: string,
@@ -17,7 +18,9 @@ const PostCard: React.FC<Iprops> = (props) => {
     <div className="card-container">
       <div className='card-cover'>
         <NavLink to={`/article/${id}`}>
-          <img alt='cover' src={thumbnail} />
+          <LazyLoad  once style={{ height: "100%", width: '100%' }} placeholder={<img   width="100%" height="100%" style={{ objectFit: "cover" }} alt="logo" />}>
+            <img alt='cover' src={thumbnail} />
+          </LazyLoad>
         </NavLink>
       </div>
       <div className='card-info'>

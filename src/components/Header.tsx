@@ -3,8 +3,8 @@ import './Header.scss'
 import Navbar from './Navbar'
 
 export default function Header(): JSX.Element {
-  const imageUrl: string = 'https://qiniu.hfsblog.com/36966143821_36e65cfcb3_k.jpg'
-  const imageStr: string = `url(${imageUrl})`
+  //const imageUrl: string = 'https://qiniu.hfsblog.com/36966143821_36e65cfcb3_k.jpg'
+  //const imageStr: string = `url(${imageUrl})`
   const scrollToElement = (e: any) => {
     const elem = document.getElementById('post')
     if (elem) {
@@ -12,7 +12,7 @@ export default function Header(): JSX.Element {
     }
   }
   return (
-    <header className="header-container" style={{ backgroundImage: imageStr }} >
+    <header className="header-container">
       <Navbar />
       <div className="blog-infor">
         <h1 className='name'>
