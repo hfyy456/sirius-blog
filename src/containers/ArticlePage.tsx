@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import marked from 'marked'
 import Topbar from '../components/Topbar'
+import CommentList from '../components/CommentList';
 import service from '../utils/fetch'
 import hljs from 'highlight.js';
 import setDate from '../utils/date'
@@ -60,6 +61,7 @@ export default function Article() {
             </article>
           </div>
         </main>
+        <CommentList/>
       </div>
     </>
   )

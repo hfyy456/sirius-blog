@@ -1,4 +1,7 @@
 @import '../themes/theme.scss';
+a:link{ @include themify($themes) {
+  color: themed('fontColor');
+}}
 
 .header-container {
   height: 100vh;

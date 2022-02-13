@@ -55,6 +55,9 @@ export default function Tools() {
     <>
       <div className={`tools-container${visibie ? ' show' : ' hide'}`} >
         <button onClick={handleClickThemeSwitch} className='action-button'>
+          <i className='iconfont icona-tool1'></i>
+        </button>
+        <button onClick={handleClickThemeSwitch} className='action-button'>
           <i className='iconfont icontheme'></i>
         </button>
         <button onClick={handleClickBackToTop} className='action-button'>
