@@ -2,6 +2,7 @@ $themes:(
   light:(
     bgColor: rgba(247,247,247,.95),
     fontColor: #2b3743,
+    secFontColor: rgb(78,89,105),
     mainBgColor: rgba(247,247,247,.95),
     borderColor: #dcdfe6,
     activeColor:#49b1f5,
@@ -13,7 +14,7 @@ $themes:(
     mainBgColor: #1f2c35,
     borderColor: #384651,
     pureColor:#2b3743,
-
+    secFontColor: #d8d8d8,
   ),
 );
 
