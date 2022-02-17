@@ -10,7 +10,9 @@ export default function CommentItem(): JSX.Element {
             </div>
             <div className="cmt-meta">
                 <div className="cmt-top">
-                    <span className="cmt-username">Socrates</span>
+                    <a href="www.baidu.com" className="cmt-username">
+                        Socrates
+                    </a>
                     <span className="cmt-date">Feb 15,2022</span>
                 </div>
                 <div className="cmt-desc">
@@ -20,7 +22,13 @@ export default function CommentItem(): JSX.Element {
                     TikTok).
                 </div>
             </div>
-            <div className="cmt-action"></div>
+            <div className="cmt-action">
+                <div className="action-item">
+                    <i className="iconfont iconreply" />
+                    <span>Reply</span>
+                </div>
+            </div>
+            <div className="user-agent">On Macos</div>
         </div>
     )
 }

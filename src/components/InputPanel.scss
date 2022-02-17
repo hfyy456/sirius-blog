@@ -36,3 +36,36 @@
         border-color: #b2b2b2;
     }
 }
+.info-panel-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 16px;
+    min-height: 40px;
+}
+.input-item {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    label {
+        margin-right: 10px;
+    }
+    .url {
+        width: 300px;
+        @media screen and (max-width: 400px) {
+            width: 250px;
+        }
+    }
+    input {
+        @include themify($themes) {
+            background: themed("pureColor");
+        }
+        border: 1px solid #e5e5e5;
+        &:focus {
+            outline: none;
+            background-color: #fff;
+            color: #666;
+            border-color: #1e87f0;
+        }
+    }
+}
