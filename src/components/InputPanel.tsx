@@ -13,7 +13,6 @@ export default function InputPanel(props: any): JSX.Element {
     })
     const submitComment = (e: any) => {
         setComment({ ...comment, content: "" })
-
         localStorage.setItem("commentInfo", JSON.stringify(comment))
     }
     const handleContentChange = (e: any) => {
@@ -53,7 +52,7 @@ export default function InputPanel(props: any): JSX.Element {
                     onChange={handleContentChange}
                 ></textarea>
                 <div className="submit-btn" onClick={submitComment}>
-                    提交评论{" "}
+                    提交评论
                 </div>
             </div>
         </>
