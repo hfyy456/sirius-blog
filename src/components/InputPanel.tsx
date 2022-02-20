@@ -11,6 +11,7 @@ export default function InputPanel(props: any): JSX.Element {
     useEffect(() => {
         console.log(comment, props)
     })
+
     const submitComment = (e: any) => {
         setComment({ ...comment, content: "" })
         localStorage.setItem("commentInfo", JSON.stringify(comment))
@@ -32,6 +33,7 @@ export default function InputPanel(props: any): JSX.Element {
                     <input
                         value={comment.nickname}
                         onChange={handleNicknameChange}
+                        placeholder="匿名用户"
                     />
                 </div>
                 <div className="input-item">
@@ -50,6 +52,7 @@ export default function InputPanel(props: any): JSX.Element {
                     rows={4}
                     value={comment.content}
                     onChange={handleContentChange}
+                    placeholder="说点什么吧..."
                 ></textarea>
                 <div className="submit-btn" onClick={submitComment}>
                     提交评论

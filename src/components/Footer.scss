@@ -1,40 +1,42 @@
-@import '../themes/theme.scss';
+@import "../themes/theme.scss";
 
 .footer-container {
-  position: absolute;
-  bottom: 3vh;
-  font-size: 1.2rem;
-  width: 100%;
-  text-align: center;
-
-  @include themify($themes) {
-    color: themed('fontColor');
-  }
-  .copyright {
-    margin-top:2vw;
-    a{
-      text-decoration:underline;
+    position: absolute;
+    bottom: 1vh;
+    font-size: 1.2rem;
+    width: 100%;
+    text-align: center;
+    .icp {
+        margin-top: 4px;
+        font-size: 14px;
     }
-  }
-  .links{
-    width: 10vw;
-    margin: auto;
-    justify-content: space-around;
-    display: flex;
-    a{
-      font-size: 1.5rem;
-      &:hover{
-        opacity: 0.8;
-      }
+    @include themify($themes) {
+        color: themed("fontColor");
     }
-    .mail{
-      @include themify($themes) {
-        color: themed('fontColor');
-      }
+    .copyright {
+        margin-top: 2vw;
+        a {
+            text-decoration: underline;
+        }
     }
-    @media screen and (max-width:768px) {
-      width:40vw;
+    .links {
+        width: 10vw;
+        margin: auto;
+        justify-content: space-around;
+        display: flex;
+        a {
+            font-size: 1.5rem;
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+        .mail {
+            @include themify($themes) {
+                color: themed("fontColor");
+            }
+        }
+        @media screen and (max-width: 768px) {
+            width: 40vw;
+        }
     }
-  }
-
 }

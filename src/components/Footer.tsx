@@ -46,6 +46,7 @@ export default function Footer() {
                 </a>
                 .
             </div>
+            <div className="icp">浙ICP备20003398号</div>
         </footer>
     )
 }

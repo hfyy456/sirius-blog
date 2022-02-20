@@ -25,6 +25,7 @@
 }
 .cmt-title {
     position: relative;
+    margin-bottom: 4px;
     &::after {
         content: "";
         display: block;
@@ -44,5 +45,31 @@
 .cmt-wrap {
     margin-top: 20px;
     border: 1px solid #f0f0f0;
-    min-height: 200px;
+    min-height: 80px;
+    padding-bottom: 20px;
+    position: relative;
+    .show-comment {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        @include themify($themes) {
+            background: themed("btnBgColor");
+        }
+        color: #2b3743;
+        width: fit-content;
+        user-select: none;
+        font-size: 16px;
+        height: 32px;
+        padding: 4px 10px;
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        margin: auto;
+        margin-bottom: 20px;
+        &:active {
+            opacity: 0.5;
+        }
+    }
 }

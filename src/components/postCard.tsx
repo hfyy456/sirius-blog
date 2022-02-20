@@ -48,8 +48,7 @@ const PostCard: React.FC<Iprops> = (props) => {
                         阅读：
                         {visits}
                         <i className="iconfont iconreply re" />
-                        评论：
-                        {visits}
+                        评论： 0
                     </div>
                 </div>
             </div>

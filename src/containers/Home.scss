@@ -4,11 +4,21 @@
     overflow: hidden;
     @include themify($themes) {
         background: themed("bgColor");
-        color: themed("fontColor");
     }
 }
+.no-more {
+    text-align: center;
+    @include themify($themes) {
+        color: themed("fontColor");
+    }
+    font-size: 18px;
+    margin-bottom: 20px;
+}
 .load-more {
-    background-color: rgba(46, 50, 56, 0.05);
+    @include themify($themes) {
+        background: themed("btnBgColor");
+    }
+    color: #2b3743;
     width: fit-content;
     user-select: none;
     font-size: 16px;
@@ -20,9 +30,6 @@
     cursor: pointer;
     margin: auto;
     margin-bottom: 20px;
-    &:hover {
-        opacity: 0.8;
-    }
     &:active {
         opacity: 0.5;
     }
@@ -49,8 +56,7 @@
 .container3 > div {
     width: 6px;
     height: 6px;
-    background-color: #333;
-
+    background: #2b3743;
     border-radius: 100%;
     position: absolute;
     -webkit-animation: bouncedelay 1.2s infinite ease-in-out;

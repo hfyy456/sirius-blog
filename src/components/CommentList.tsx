@@ -6,10 +6,11 @@ import CommentItem from "./CommentItem"
 
 export default function Comment(): JSX.Element {
     const [comment, setComment] = useState({
-        nickname: "11",
+        nickname: "",
         url: "",
-        content: "123",
+        content: "",
     })
+    const [showCmt, setShowCmt] = useState(false)
     useEffect(() => {
         const local = localStorage.getItem("commentInfo")
         if (local !== null) {
@@ -21,9 +22,15 @@ export default function Comment(): JSX.Element {
             <div className="cmt-title">评论列表</div>
             <InputPanel comment={comment} setComment={setComment} />
             <div className="cmt-wrap">
-                <CommentItem />
-                <CommentItem />
-                <CommentItem />
+                {!showCmt ? (
+                    <div className="show-comment">查看评论</div>
+                ) : (
+                    <div className="list">
+                        <CommentItem />
+                        <CommentItem />
+                        <CommentItem />
+                    </div>
+                )}
             </div>
         </div>
     )
