@@ -21,6 +21,7 @@
         "@types/react-transition-group": "^4.4.0",
         "@types/redux-logger": "^3.0.8",
         "@types/showdown": "^1.9.3",
+        "@types/ua-parser-js": "^0.7.36",
         "connected-react-router": "^6.8.0",
         "highlight.js": "^10.4.0",
         "history": "^4.7.2",
@@ -37,6 +38,7 @@
         "redux-logger": "^3.0.6",
         "sass-loader": "^10.0.5",
         "typescript": "~3.8.2",
+        "ua-parser-js": "^1.0.2",
         "yarn": "^1.22.11"
     },
     "scripts": {

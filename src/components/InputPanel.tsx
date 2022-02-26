@@ -1,20 +1,41 @@
 import React, { useEffect } from "react"
 import "./InputPanel.scss"
+import service from "../utils/fetch"
+import { useParams } from "react-router"
+import UAParser from "ua-parser-js"
+interface Iparams {
+    id: string
+}
 interface Iprops {
     nickname: string
     content: string
     url: string
 }
 export default function InputPanel(props: any): JSX.Element {
-    const { comment, setComment } = props
-
-    useEffect(() => {
-        console.log(comment, props)
-    })
+    const { comment, setComment, getCommentList } = props
+    const routerParams: Iparams = useParams()
+    const parser = new UAParser()
+    const ua = parser.getResult()
+    const os = `${ua.browser.name} ${ua.browser.version} | ${ua.os.name} ${ua.os.version}`
+    useEffect(() => {})
 
     const submitComment = (e: any) => {
-        setComment({ ...comment, content: "" })
-        localStorage.setItem("commentInfo", JSON.stringify(comment))
+        const params = {
+            ...comment,
+            aid: routerParams?.id,
+            pid: 0,
+            os: os,
+            avatar: "//qiniu.hfsblog.com/36034bbae8774a77d3b15d04a38a38f8.jpeg",
+        }
+        service.post("comment/create", params).then((res: any) => {
+            setComment({ ...comment, content: "" })
+            const p = {
+                ...comment,
+                content: "",
+            }
+            localStorage.setItem("commentInfo", JSON.stringify(p))
+            getCommentList()
+        })
     }
     const handleContentChange = (e: any) => {
         setComment({ ...comment, content: e.target.value })

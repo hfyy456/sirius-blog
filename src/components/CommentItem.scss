@@ -21,6 +21,8 @@
     }
 }
 .cmt-meta {
+    width: 100%;
+
     .cmt-top {
         display: flex;
         align-items: flex-end;
@@ -28,11 +30,13 @@
             color: #858585;
             margin-left: auto;
             font-size: 16px;
+            line-height: 1;
         }
         .cmt-username {
-            font-size: 20px;
+            font-size: 18px;
             margin-bottom: 1px;
             text-decoration: none;
+            line-height: 1;
         }
         a:visited {
             @include themify($themes) {
@@ -45,6 +49,9 @@
         @include themify($themes) {
             color: themed("secFontColor");
         }
+        display: flex;
+        align-items: center;
+        min-height: 30px;
         font-size: 16px;
     }
 }

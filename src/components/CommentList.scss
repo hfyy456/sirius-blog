@@ -48,6 +48,12 @@
     min-height: 80px;
     padding-bottom: 20px;
     position: relative;
+    .no-list {
+        display: flex;
+        align-items: center;
+        height: 80px;
+        justify-content: center;
+    }
     .show-comment {
         position: absolute;
         left: 50%;

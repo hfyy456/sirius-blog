@@ -41,6 +41,6 @@ class Xfetch {
 const baseUrl = 'https://www.hfsblog.com/api/'
 //const baseUrl = 'http://106.12.117.164:10086/api/'
 
-//const baseUrl = 'http://192.168.1.4:10086/api/'
+//const baseUrl = 'http://192.168.1.2:10086/api/'
 const service: any = new Xfetch(baseUrl)
 export default service
