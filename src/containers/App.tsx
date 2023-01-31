@@ -6,6 +6,7 @@ import { useLocation } from 'react-router-dom'
 import Header from '../components/Header';
 import Tools from '../components/Tools';
 import Loading from '../components/Loading'
+
 type Props = {
   children: ReactNode;
 };
