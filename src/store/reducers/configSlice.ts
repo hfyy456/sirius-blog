@@ -1,16 +1,19 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 // eslint-disable-next-line import/no-cycle
-import { RootState } from '../index';
+import { RootState } from "../index";
+import { setTheme } from "../../utils/common";
 
 const configSlice = createSlice({
-  name: 'config',
-  initialState: { theme: 'light', loading: false },
+  name: "config",
+  initialState: { theme: "light", loading: false },
   reducers: {
     switchDark: (state) => {
-      state.theme = 'dark';
+      state.theme = "dark";
+      setTheme("dark");
     },
     switchLight: (state) => {
-      state.theme = 'light';
+      state.theme = "light";
+      setTheme("light");
     },
     setLoading: (state) => {
       state.loading = true;
@@ -21,8 +24,8 @@ const configSlice = createSlice({
   },
 });
 
-export const { switchDark, switchLight, setLoading, setLoaded } = configSlice.actions;
-
+export const { switchDark, switchLight, setLoading, setLoaded } =
+  configSlice.actions;
 
 export default configSlice.reducer;
 

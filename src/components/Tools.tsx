@@ -6,6 +6,12 @@ import {
 } from "../store/reducers/configSlice";
 import { useDispatch, useSelector } from "react-redux";
 import "./Tools.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCircleHalfStroke,
+  faChevronUp,
+} from "@fortawesome/free-solid-svg-icons";
+
 export default function Tools() {
   const dispatch = useDispatch();
   const theme: string = useSelector(selectTheme);
@@ -62,10 +68,10 @@ export default function Tools() {
           <i className='iconfont icona-tool1'></i>
         </button> */}
         <button onClick={handleClickThemeSwitch} className="action-button">
-          <i className="iconfont icontheme"></i>
+          <FontAwesomeIcon icon={faCircleHalfStroke} />
         </button>
         <button onClick={handleClickBackToTop} className="action-button">
-          <i className="iconfont icontop"></i>
+        <FontAwesomeIcon icon={faChevronUp} />
         </button>
       </div>
     </>

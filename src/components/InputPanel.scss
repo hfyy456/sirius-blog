@@ -1,72 +1,68 @@
-@import "../themes/theme.scss";
 
 .ipt-panel-container {
-    border: 1px solid #f0f0f0;
-    border-radius: 4px;
-    overflow: hidden;
-    position: relative;
-    padding: 8px;
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 4px;
+  border: 1px solid #f0f0f0;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  padding: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 4px;
 }
 .panel-textarea {
-    width: 100%;
+  width: 100%;
+  border: none;
+  margin: auto;
+  background-color: var(--pureColor);
+
+  &:focus {
+    outline: none !important;
     border: none;
-    margin: auto;
-    @include themify($themes) {
-        background: themed("pureColor");
-    }
-    &:focus {
-        outline: none !important;
-        border: none;
-    }
+  }
 }
 
 .submit-btn {
-    margin-left: auto;
-    margin-top: 10px;
-    border-radius: 3px;
-    background-color: transparent;
-    border: 1px solid #e5e5e5;
-    width: fit-content;
-    font-size: 12px;
-    padding: 6px;
-    cursor: pointer;
-    &:hover {
-        border-color: #b2b2b2;
-    }
+  margin-left: auto;
+  margin-top: 10px;
+  border-radius: 3px;
+  background-color: transparent;
+  border: 1px solid #e5e5e5;
+  width: fit-content;
+  font-size: 12px;
+  padding: 6px;
+  cursor: pointer;
+  &:hover {
+    border-color: #b2b2b2;
+  }
 }
 .info-panel-container {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    font-size: 16px;
-    min-height: 40px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 16px;
+  min-height: 40px;
 }
 .input-item {
-    display: flex;
-    align-items: center;
-    margin-right: 20px;
-    label {
-        margin-right: 10px;
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  label {
+    margin-right: 10px;
+  }
+  .url {
+    width: 300px;
+    @media screen and (max-width: 400px) {
+      width: 250px;
     }
-    .url {
-        width: 300px;
-        @media screen and (max-width: 400px) {
-            width: 250px;
-        }
+  }
+  input {
+    background-color: var(--pureColor);
+    border: 1px solid #e5e5e5;
+    &:focus {
+      outline: none;
+      background-color: #fff;
+      color: #666;
+      border-color: #1e87f0;
     }
-    input {
-        @include themify($themes) {
-            background: themed("pureColor");
-        }
-        border: 1px solid #e5e5e5;
-        &:focus {
-            outline: none;
-            background-color: #fff;
-            color: #666;
-            border-color: #1e87f0;
-        }
-    }
+  }
 }

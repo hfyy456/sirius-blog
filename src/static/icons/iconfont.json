@@ -6,6 +6,41 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "33900683",
+      "name": "Camera2 (1)",
+      "font_class": "camera-fill",
+      "unicode": "e619",
+      "unicode_decimal": 58905
+    },
+    {
+      "icon_id": "33607335",
+      "name": "lock",
+      "font_class": "lock",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
+      "icon_id": "33607336",
+      "name": "close (1)",
+      "font_class": "a-close1",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    },
+    {
+      "icon_id": "33607337",
+      "name": "user",
+      "font_class": "user",
+      "unicode": "e617",
+      "unicode_decimal": 58903
+    },
+    {
+      "icon_id": "33607338",
+      "name": "browse",
+      "font_class": "browse",
+      "unicode": "e618",
+      "unicode_decimal": 58904
+    },
+    {
       "icon_id": "27721110",
       "name": "view",
       "font_class": "view",

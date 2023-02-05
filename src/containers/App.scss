@@ -1,10 +1,39 @@
-@import '../static/icons/iconfont.css';
-
+@import "../static/icons/iconfont.css";
+:root {
+  --bgColor: rgba(247, 247, 247, 0.95);
+  --fontColor: #2b3743;
+  --secFontColor: rgb(78, 89, 105);
+  --mainBgColor: rgba(247, 247, 247, 0.95);
+  --borderColor: #dcdfe6;
+  --activeColor: #49b1f5;
+  --pureColor: #ffffff;
+  --previewColor: black;
+  --btnBgColor: rgba(46, 50, 56, 0.05);
+}
+html[theme="dark"] {
+  --bgColor: rgba(43, 55, 67, 0.95);
+  --fontColor: #d8d8d8;
+  --mainBgColor: #1f2c35;
+  --borderColor: #384651;
+  --pureColor: #2b3743;
+  --secFontColor: #d8d8d8;
+  --btnBgColor: #d8d8d8;
+  --previewColor: rgba(255, 255, 255, 0.5);
+}
 #router-wrapper {
   overflow: hidden;
-
 }
-
+.alc {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.flc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .forward-enter {
   opacity: 1;
   transform: translateX(100%);
@@ -54,10 +83,10 @@ body {
   overflow-x: hidden;
   -webkit-tap-highlight-color: transparent;
 }
-html{
+html {
   font-size: 20px;
-  @media screen  and (max-width:768px){
-      font-size: 16px;
+  @media screen and (max-width: 768px) {
+    font-size: 16px;
   }
 }
 ::-webkit-scrollbar {

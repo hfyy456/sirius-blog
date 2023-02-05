@@ -1,23 +1,16 @@
-@import '../themes/theme.scss';
-
 .top-container {
   position: sticky;
   height: 5vh;
-  padding:0 2vw 0 2vw;
+  padding: 0 2vw 0 2vw;
   border-bottom: 1px solid #f7f7f7;
   display: flex;
   align-items: center;
-  @include themify($themes) {
-    background: themed('pureColor');
-  }
-  a{
+  background: var(--pureColor);
+  a {
     text-decoration: none;
   }
   i {
-    @include themify($themes) {
-      color: themed('fontColor');
-    }
-
+    color: var(--fontColor);
     font-size: 28px;
     cursor: pointer;
     &:hover {
