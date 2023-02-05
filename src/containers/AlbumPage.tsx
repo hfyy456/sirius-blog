@@ -4,21 +4,27 @@ import { setLoaded } from "../store/reducers/configSlice";
 import "./album.scss";
 import Topbar from "../components/Topbar";
 import { useHistory } from "react-router-dom";
-
+import json from "../utils/photo.json";
+const indexKey = "sirius-photo-index";
 export default function Album() {
   const dispatch = useDispatch();
   const history = useHistory();
+  const photos = JSON.parse(JSON.stringify(json)).photos;
+  const firPhoto = photos.splice(0, 1)[0];
+  const rightPhotos = photos.splice(0, 4);
   useEffect(() => {
     setTimeout(() => {
       dispatch(setLoaded());
     }, 500);
-    console.log(121);
   }, []);
-  const openPhoto = () => {
-    history.push({ pathname: "/photo" });
+  const openPhoto = (e: any, index: number) => {
+    localStorage.setItem(indexKey, index);
+    history.push({
+      pathname: "/photo",
+    });
   };
   return (
-    <div>
+    <div className="cnt">
       <Topbar />
       <div className="album-container">
         <div className="fir-con">
@@ -26,9 +32,9 @@ export default function Album() {
             <div className="top-card mt1">
               <div
                 className="pc-in"
-                onClick={openPhoto}
+                onClick={(e) => openPhoto(e, 0)}
                 style={{
-                  backgroundImage: `url(${"https://github.com/miccall/MyTextures/blob/master/271043-106.jpg?raw=true"})`,
+                  backgroundImage: `url(${`${firPhoto?.url}?imageView2/1/w/1320/h/760`})`,
                 }}
               ></div>
               <div className="pc-info">
@@ -38,112 +44,43 @@ export default function Album() {
             </div>
           </div>
           <div className="right-con">
-            <div className="other-card mt1">
-              {" "}
-              <div
-                className="pc-in"
-                style={{
-                  backgroundImage: `url(${"https://github.com/miccall/MyTextures/blob/master/271043-106.jpg?raw=true"})`,
-                }}
-              ></div>
-              <div className="pc-info">
-                <div className="pc-name">❤️ Welcome to Gradient ❤️</div>
-                <div className="pc-date">October 14 2018</div>
-              </div>
-            </div>
-            <div className="other-card mt1">
-              {" "}
-              <div
-                className="pc-in"
-                style={{
-                  backgroundImage: `url(${"https://github.com/miccall/MyTextures/blob/master/271043-106.jpg?raw=true"})`,
-                }}
-              ></div>
-              <div className="pc-info">
-                <div className="pc-name">❤️ Welcome to Gradient ❤️</div>
-                <div className="pc-date">October 14 2018</div>
-              </div>
-            </div>
-            <div className="other-card mt1">
-              {" "}
-              <div
-                className="pc-in"
-                style={{
-                  backgroundImage: `url(${"https://github.com/miccall/MyTextures/blob/master/271043-106.jpg?raw=true"})`,
-                }}
-              ></div>
-              <div className="pc-info">
-                <div className="pc-name">❤️ Welcome to Gradient ❤️</div>
-                <div className="pc-date">October 14 2018</div>
-              </div>
-            </div>
-            <div className="other-card mt1">
-              {" "}
-              <div
-                className="pc-in"
-                style={{
-                  backgroundImage: `url(${"https://github.com/miccall/MyTextures/blob/master/271043-106.jpg?raw=true"})`,
-                }}
-              ></div>
-              <div className="pc-info">
-                <div className="pc-name">❤️ Welcome to Gradient ❤️</div>
-                <div className="pc-date">October 14 2018</div>
-              </div>
-            </div>
+            {rightPhotos.map((item, index) => {
+              return (
+                <div key={index} className="other-card mt1">
+                  <div
+                    className="pc-in"
+                    onClick={(e) => openPhoto(e, index + 1)}
+                    style={{
+                      backgroundImage: `url(${item.url}?imageView2/1/w/640/h/380)`,
+                    }}
+                  ></div>
+                  <div className="pc-info">
+                    <div className="pc-name">❤️ Welcome to Gradient ❤️</div>
+                    <div className="pc-date">October 14 2018</div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
         <div className="next-con">
-          <div className="other-card mt2">
-            {" "}
-            <div
-              className="pc-in"
-              style={{
-                backgroundImage: `url(${"https://github.com/miccall/MyTextures/blob/master/271043-106.jpg?raw=true"})`,
-              }}
-            ></div>
-            <div className="pc-info">
-              <div className="pc-name">❤️ Welcome to Gradient ❤️</div>
-              <div className="pc-date">October 14 2018</div>
-            </div>
-          </div>
-          <div className="other-card mt2">
-            {" "}
-            <div
-              className="pc-in"
-              style={{
-                backgroundImage: `url(${"https://github.com/miccall/MyTextures/blob/master/271043-106.jpg?raw=true"})`,
-              }}
-            ></div>
-            <div className="pc-info">
-              <div className="pc-name">❤️ Welcome to Gradient ❤️</div>
-              <div className="pc-date">October 14 2018</div>
-            </div>
-          </div>
-          <div className="other-card mt2">
-            {" "}
-            <div
-              className="pc-in"
-              style={{
-                backgroundImage: `url(${"https://github.com/miccall/MyTextures/blob/master/271043-106.jpg?raw=true"})`,
-              }}
-            ></div>
-            <div className="pc-info">
-              <div className="pc-name">❤️ Welcome to Gradient ❤️</div>
-              <div className="pc-date">October 14 2018</div>
-            </div>
-          </div>
-          <div className="other-card mt2">
-            <div
-              className="pc-in"
-              style={{
-                backgroundImage: `url(${"https://github.com/miccall/MyTextures/blob/master/271043-106.jpg?raw=true"})`,
-              }}
-            ></div>
-            <div className="pc-info">
-              <div className="pc-name">❤️ Welcome to Gradient ❤️</div>
-              <div className="pc-date">October 14 2018</div>
-            </div>
-          </div>
+          {photos.map((item, index) => {
+            return (
+              <div key={index} className="other-card mt2">
+                <div
+                  className="pc-in"
+                  onClick={(e) => openPhoto(e, index + 5)}
+                  style={{
+                    backgroundImage: `url(${item.url}?imageView2/1/w/640/h/380)`,
+                  }}
+                ></div>
+                <div className="pc-info">
+                  <div className="pc-name">❤️ Welcome to Gradient ❤️</div>
+                  <div className="pc-date">October 14 2018</div>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>

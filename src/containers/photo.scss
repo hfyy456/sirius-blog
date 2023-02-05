@@ -13,7 +13,20 @@
   margin: auto;
   @extend .slide-in-fwd-center;
   transition: all 0.5s;
+  z-index: 2;
+  user-select: none;
 }
+.img-loading {
+  color: #fff;
+  top: 40%;
+  font-size: 1.4rem;
+  background-color: transparent;
+  z-index: 1;
+  svg {
+    animation: sl-rotate 1.4s linear infinite;
+  }
+}
+
 .arrow {
   position: absolute;
   cursor: pointer;
@@ -55,17 +68,17 @@
   }
 }
 .bottom-list {
-  display: flex;
   padding: 10px 30px;
-
+  text-align: start;
   .bottom-item {
+    user-select: none;
     width: 150px;
     height: 100px;
     position: relative;
     border: 2px solid #fff;
     margin: 0 2px;
     cursor: pointer;
-
+    display: inline-block;
     img {
       object-fit: cover;
       width: 100%;
@@ -78,6 +91,7 @@
 }
 
 .bottom-bar {
+  z-index: 3;
   position: absolute;
   border-top: solid 1px #ddd;
   bottom: 0;
@@ -108,5 +122,13 @@
   }
   100% {
     transform: translateY(0);
+  }
+}
+@keyframes sl-rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
